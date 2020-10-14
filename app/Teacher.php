@@ -10,8 +10,8 @@ class Teacher extends Model
 
     protected $table = 'Teachers';
 
-    public function teachers(){
-        return this->hasOne('App\Teacher');
+    public function users(){
+        return this->hasOne('App\User');
     }
     
     public function courses(){

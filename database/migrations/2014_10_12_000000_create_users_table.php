@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('direction');
             $table->string('password');
             $table->string('user');
+            $table->foreignId('role_id');
             $table->rememberToken();
             $table->timestamps();
         });
