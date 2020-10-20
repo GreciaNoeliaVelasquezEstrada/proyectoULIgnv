@@ -10,18 +10,18 @@ class Evaluation extends Model
     protected $table = 'Evaluation';
 
     public function subjects(){
-        return this->hasMany('App\Subject');
+        return $this->hasMany('App\Subject');
     }
 
     public function students(){
-        return this->belongTo('App\Student','student_id');
+        return $this->belongTo('App\Student','student_id');
     }
 
     public function teachers(){
-        return this->belongTo('App\Teacher','teacher_id');
+        return $this->belongTo('App\Teacher','teacher_id');
     }
 
     public function matter(){
-        return this->hasMany('App\Matter');
+        return $this->hasMany('App\Matter');
     }
 }

@@ -10,19 +10,19 @@ class Student extends Model
     protected $table = 'Students';
 
     public function users(){
-        return this->hasOne('App\User');
+        return $this->hasOne('App\User');
     }
 
     public function courses(){
-        return this->hasOne('App\Course');
+        return $this->hasOne('App\Course');
     }
 
     public function evaluations(){
-        return this->hasMany('App\Evaluation');
+        return $this->hasMany('App\Evaluation');
     }
 
     public function subjects(){
-        return this->hasMany('App\Subject');
+        return $this->hasMany('App\Subject');
     }
 
 }
